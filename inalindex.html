@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Mutheu 💗</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #ffd6e8, #ffffff);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .hearts span {
+      position: fixed;
+      bottom: -10px;
+      font-size: 18px;
+      animation: floatUp 10s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0);
+        opacity: 0.6;
+      }
+      to {
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
+    }
+
+    .landing {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .landing h1 {
+      font-size: 2.3rem;
+      color: #b30059;
+      margin-bottom: 15px;
+    }
+
+    .landing p {
+      font-size: 1.1rem;
+      color: #6b0033;
+      margin-bottom: 30px;
+    }
+
+    .open-btn {
+      background: #ff5ca8;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(255,92,168,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .open-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .cards-section {
+      display: none;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .cards-section h2 {
+      color: #b30059;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card.flip .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .card-front {
+      background: #ffe6f2;
+      color: #b30059;
+      font-weight: 600;
+    }
+
+    .card-back {
+      background: #ff5ca8;
+      color: white;
+      transform: rotateY(180deg);
+      font-size: 0.95rem;
+    }
+
+    .music {
+      margin-top: 40px;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+
+  <!-- Landing Page -->
+  <section class="landing" id="landing">
+    <h1>Hey Mamaa💗</h1>
+    <p>Mburu loves u.</p>
+    <button class="open-btn" onclick="openCards()"> View your cards 💌</button>
+  </section>  
+  
+  <div style="text-align:center;">
+     <audio controls>
+       <source src="https://raw.githubusercontent.com/saelrealmusic-dot/valentine/refs/heads/main/superpowers.mp3"
+         type="audio/mpeg">
+    </audio>
+  </div>
+  
+
+
+
+  <!-- Cards -->
+  <section class="cards-section" id="cards">
+    <h2>Peace Mutheu... 💕</h2>
+
+    <div class="cards">
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">Ever since I knew you...</div>
+          <div class="card-back">Every moment with you feels calm, warm, and real. I spent days learning how to do this and I am really proud i could get to do this for you. You are very special to me.</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">No matter where I am, you’re my safe place...</div>
+          <div class="card-back">Thinking of you makes me feel wanted and appreciated,thankyou for doing that for me even tho it doesn't really occur ty how it is wonderful. I really appreciate.</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">You’re effortlessly beautiful...</div>
+          <div class="card-back">Inside and out — in ways words can’t fully explain. Pretty eyes, pretty lips, pretty skintone, pretty voice, pretty personality, pretty body, pretty smile, pretty laugh. You are more than gorgeuos.</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">One thing fa sho...</div>
+          <div class="card-back">Today, tomorrow, and every day after that,even if we break up one day you forever hold a significant place in my heart. We are much stronger while together, stay with me ma.</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">From the first day of 2026...</div>
+          <div class="card-back">My world has felt brighter and softer. You make even the ordinary days feel magical(everytime i look your pictures). Every laugh, every smile, every little moment with you is a memory i hold close to my tender heart.</div>
+        </div>
+      </div>
+
+      <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">Ik life can be upredictable,but 1 thing i am sure of is...</div>
+          <div class="card-back">I want to walk every path,face evry challenge and celebrate every joy with yoy. I want to be your safe place,your biggest fan,and your forever person.</div>
+        </div>
+      </div>
+
+       <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">So today I just dont want to say Iloveu...</div>
+          <div class="card-back">...I want to promise you that I'll always cherish,respect,and adore you.You are my anchor to raging storms,my love and more than my words can ever express.</div>
+        </div>
+      </div>
+
+       <div class="card" onclick="flip(this)">
+        <div class="card-inner">
+          <div class="card-front">I will ALWAYS care for you baby,you are my princess...</div>
+          <div class="card-back">You are just like a flower,when drought hits I'll keep continue watering you.My bounty is as boundless as the sea,My love as deep.the more I give to thee,The more I have for both are infinite. Te amo.</div>
+        </div>
+      </div>      
+
+  <script>
+    function openCards() {
+      document.getElementById("landing").style.display = "none";
+      document.getElementById("cards").style.display = "block";
+    }
+
+    function flip(card) {
+      card.classList.toggle("flip");
+    }
+
+    // Create floating hearts
+    const hearts = document.querySelector(".hearts");
+    setInterval(() => {
+      const heart = document.createElement("span");
+      heart.innerHTML = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (6 + Math.random() * 5) + "s";
+      hearts.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }, 500);
+  </script>
+
+</body>
+</html>
